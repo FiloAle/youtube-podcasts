@@ -1,0 +1,23 @@
+import { Stack } from 'expo-router';
+
+export default function FollowedLayout() {
+  return (
+    <Stack>
+      <Stack.Screen 
+        name="index" 
+        options={{ 
+          headerShown: false,
+        }} 
+      />
+      <Stack.Screen 
+        name="channel/[id]" 
+        options={{ 
+          title: 'Canale',
+          headerTransparent: true,
+          headerShadowVisible: false,
+          headerBackButtonDisplayMode: "minimal",
+        }} 
+      />
+    </Stack>
+  );
+}

@@ -1,56 +1,37 @@
-# Welcome to your Expo app 👋
+# YouTube Podcasts
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native iOS app (built with Expo) that transforms YouTube into a podcast experience. Listen to your favorite channels in the background with a clean interface, fully integrated system audio player.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Search & Follow:** Search for YouTube channels and follow them to always have them at your fingertips
+- **Native Background Player:** The player uses native `expo-audio` to play audio in the background, with full support for iOS lock screen controls
+- **Playback Queue:** Add episodes to your queue for seamless listening
 
-   ```bash
-   npm install
-   ```
+## Development
 
-2. Start the app
+The project is specifically focused on the iOS ecosystem, but feel free to extend it to Android too.
 
-   ```bash
-   npx expo start
-   ```
+### Installation
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+To install dependencies (the necessary patches, including the ones for `expo-audio`, will be applied automatically thanks to the `postinstall` script):
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Running on an iOS Device
 
-### Other setup steps
+Since this is an app with native code (and cannot be run in Expo Go), you must build and run it on your own wired device:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+npx expo run:ios --device
+```
 
-## Learn more
+### Release Build (Production)
 
-To learn more about developing your project with Expo, look at the following resources:
+To test the real performance of the app without the overhead of the development server, you can build the Release version:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npx expo run:ios --device --configuration Release
+```
