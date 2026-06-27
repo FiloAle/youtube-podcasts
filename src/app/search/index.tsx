@@ -3,20 +3,18 @@ import { Host, TextField, useNativeState } from "@expo/ui/swift-ui";
 import { foregroundStyle } from "@expo/ui/swift-ui/modifiers";
 import { GlassView } from "expo-glass-effect";
 import { Image } from "expo-image";
+import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { SymbolView } from "expo-symbols";
 import React, { useCallback, useEffect, useState } from "react";
 import {
 	ActivityIndicator,
 	Animated,
-	FlatList,
 	Pressable,
 	StyleSheet,
 	Text,
 	View,
-	Platform,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 
 export default function SearchScreen() {
 	const router = useRouter();
@@ -137,16 +135,18 @@ export default function SearchScreen() {
 			/>
 
 			<Animated.View
-				style={[
-					styles.header,
-					{ opacity: titleOpacity }
-				]}
+				style={[styles.header, { opacity: titleOpacity }]}
 				pointerEvents="none"
 			>
 				<Text style={styles.headerTitle}>Ricerca</Text>
 			</Animated.View>
 
-			<Animated.View style={[styles.searchBarWrapper, { transform: [{ translateY: searchBarTranslateY }] }]}>
+			<Animated.View
+				style={[
+					styles.searchBarWrapper,
+					{ transform: [{ translateY: searchBarTranslateY }] },
+				]}
+			>
 				<GlassView style={styles.searchBarContainer} glassEffectStyle="regular">
 					<SymbolView
 						name="magnifyingglass"
@@ -173,7 +173,7 @@ export default function SearchScreen() {
 				indicatorStyle="white"
 				onScroll={Animated.event(
 					[{ nativeEvent: { contentOffset: { y: scrollY } } }],
-					{ useNativeDriver: true }
+					{ useNativeDriver: true },
 				)}
 				scrollEventThrottle={16}
 				ListEmptyComponent={renderEmptyState}

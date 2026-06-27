@@ -1,9 +1,8 @@
 import { usePlayer } from "@/contexts/PlayerContext";
 import { VideoInfo } from "@/lib/youtube";
 import { Ionicons } from "@expo/vector-icons";
-import { SymbolView } from "expo-symbols";
 import { Image } from "expo-image";
-import React from "react";
+import { SymbolView } from "expo-symbols";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 interface EpisodeCardProps {
@@ -45,19 +44,13 @@ export default function EpisodeCard({
 			</View>
 			<View style={styles.actions}>
 				<View style={styles.playAndDateContainer}>
-					<Pressable
-						style={styles.playButton}
-						onPress={() => playVideo(video)}
-					>
+					<Pressable style={styles.playButton} onPress={() => playVideo(video)}>
 						<Ionicons name="play" size={14} color="#C480F0" />
 						<Text style={styles.playButtonText}>{video.duration}</Text>
 					</Pressable>
 					<Text style={styles.dateInline}>{video.publishedDate}</Text>
 				</View>
-				<Pressable
-					style={styles.queueButton}
-					onPress={() => addToQueue(video)}
-				>
+				<Pressable style={styles.queueButton} onPress={() => addToQueue(video)}>
 					<SymbolView
 						name="text.line.last.and.arrowtriangle.forward"
 						size={24}

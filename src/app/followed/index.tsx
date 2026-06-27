@@ -2,10 +2,17 @@ import { useSubscriptions } from "@/contexts/SubscriptionContext";
 import { ChannelInfo } from "@/lib/youtube";
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
+import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import React from "react";
-import { Animated, FlatList, Pressable, StyleSheet, Text, View, Platform, RefreshControl } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
+import {
+	Animated,
+	Pressable,
+	RefreshControl,
+	StyleSheet,
+	Text,
+	View,
+} from "react-native";
 
 export default function FollowedScreen() {
 	const { subscriptions, refreshSubscriptions } = useSubscriptions();
@@ -54,10 +61,7 @@ export default function FollowedScreen() {
 			/>
 
 			<Animated.View
-				style={[
-					styles.header,
-					{ opacity: titleOpacity }
-				]}
+				style={[styles.header, { opacity: titleOpacity }]}
 				pointerEvents="none"
 			>
 				<Text style={styles.headerTitle}>Seguiti</Text>
@@ -80,7 +84,7 @@ export default function FollowedScreen() {
 					indicatorStyle="white"
 					onScroll={Animated.event(
 						[{ nativeEvent: { contentOffset: { y: scrollY } } }],
-						{ useNativeDriver: true }
+						{ useNativeDriver: true },
 					)}
 					scrollEventThrottle={16}
 					refreshControl={

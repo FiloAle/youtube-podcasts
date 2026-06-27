@@ -1,5 +1,4 @@
 import EpisodeCard from "@/components/EpisodeCard";
-import { usePlayer } from "@/contexts/PlayerContext";
 import { useSubscriptions } from "@/contexts/SubscriptionContext";
 import { ChannelInfo, VideoInfo, youtubeService } from "@/lib/youtube";
 import { Image } from "expo-image";
@@ -60,10 +59,7 @@ export default function ChannelScreen() {
 				<Text style={styles.channelAuthor}>{channel.subscribers}</Text>
 
 				<Pressable
-					style={[
-						styles.followButton,
-						isSubbed && styles.followedButton,
-					]}
+					style={[styles.followButton, isSubbed && styles.followedButton]}
 					onPress={() => toggleSubscription(channel)}
 				>
 					<Text
