@@ -115,7 +115,7 @@ export default function SearchScreen() {
 		if (debouncedQuery) {
 			return (
 				<View style={styles.centerContainer}>
-					<Text style={styles.emptyText}>Nessun canale trovato.</Text>
+					<Text style={styles.emptyText}>Nessun canale trovato</Text>
 				</View>
 			);
 		}
@@ -138,7 +138,7 @@ export default function SearchScreen() {
 				style={[styles.header, { opacity: titleOpacity }]}
 				pointerEvents="none"
 			>
-				<Text style={styles.headerTitle}>Ricerca</Text>
+				<Text style={styles.headerTitle}>Cerca</Text>
 			</Animated.View>
 
 			<Animated.View

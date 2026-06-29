@@ -45,7 +45,7 @@ export default function EpisodeCard({
 			<View style={styles.actions}>
 				<View style={styles.playAndDateContainer}>
 					<Pressable style={styles.playButton} onPress={() => playVideo(video)}>
-						<Ionicons name="play" size={14} color="#C480F0" />
+						<Ionicons name="play" size={14} color="#FF383C" />
 						<Text style={styles.playButtonText}>{video.duration}</Text>
 					</Pressable>
 					<Text style={styles.dateInline}>{video.publishedDate}</Text>
@@ -114,13 +114,13 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "center",
-		backgroundColor: "#2C1B3D",
+		backgroundColor: "#FF383C22",
 		paddingVertical: 6,
 		paddingHorizontal: 12,
 		borderRadius: 16,
 	},
 	playButtonText: {
-		color: "#C480F0",
+		color: "#FF383C",
 		fontSize: 13,
 		fontWeight: "600",
 		marginLeft: 6,

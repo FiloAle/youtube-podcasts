@@ -101,9 +101,9 @@ export default function HomeScreen() {
 			{subscriptions.length === 0 ? (
 				<View style={styles.emptyContainer}>
 					<Ionicons name="home-outline" size={64} color="#666" />
-					<Text style={styles.emptyText}>La tua home è vuota.</Text>
+					<Text style={styles.emptyText}>La tua home è vuota</Text>
 					<Text style={styles.emptySubtext}>
-						Segui qualche canale per vederne gli ultimi episodi qui.
+						Segui qualche canale per vederne gli ultimi episodi qui
 					</Text>
 				</View>
 			) : isLoading ? (

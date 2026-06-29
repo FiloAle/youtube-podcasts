@@ -8,7 +8,7 @@ export default function AppTabs() {
 	const colors = Colors[scheme === "unspecified" ? "light" : scheme];
 
 	return (
-		<NativeTabs backgroundColor={colors.background} tintColor="#C480F0">
+		<NativeTabs backgroundColor={colors.background} tintColor="#FF383C">
 			<NativeTabs.Trigger name="home">
 				<NativeTabs.Trigger.Label>Home</NativeTabs.Trigger.Label>
 				<NativeTabs.Trigger.Icon sf="house.fill" md="home" />
@@ -20,7 +20,7 @@ export default function AppTabs() {
 			</NativeTabs.Trigger>
 
 			<NativeTabs.Trigger name="search">
-				<NativeTabs.Trigger.Label>Ricerca</NativeTabs.Trigger.Label>
+				<NativeTabs.Trigger.Label>Cerca</NativeTabs.Trigger.Label>
 				<NativeTabs.Trigger.Icon sf="magnifyingglass" md="search" />
 			</NativeTabs.Trigger>
 		</NativeTabs>

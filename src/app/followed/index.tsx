@@ -70,9 +70,9 @@ export default function FollowedScreen() {
 			{subscriptions.length === 0 ? (
 				<View style={styles.emptyContainer}>
 					<Ionicons name="people-outline" size={64} color="#666" />
-					<Text style={styles.emptyText}>Non segui ancora nessun canale.</Text>
+					<Text style={styles.emptyText}>Non segui ancora nessun canale</Text>
 					<Text style={styles.emptySubtext}>
-						Cerca i tuoi podcast preferiti e tocca "Segui" per ritrovarli qui.
+						Cerca i tuoi podcast preferiti e tocca "Segui" per ritrovarli qui
 					</Text>
 				</View>
 			) : (

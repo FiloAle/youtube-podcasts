@@ -237,7 +237,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
 				<View
 					style={{
 						position: "absolute",
-						bottom: 100,
+						bottom: 164,
 						left: 20,
 						right: 20,
 						backgroundColor: "#333",
